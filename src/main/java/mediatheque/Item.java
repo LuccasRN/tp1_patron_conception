@@ -7,18 +7,9 @@ public abstract class Item {
 		this.title = title;
 	}
 
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public abstract void print();
-
-	@Override
+	@Override 
 	public String toString() {
 		return title;
 	}
-	
+	public abstract void accept(DeviceVisitor visitor) ;
 }

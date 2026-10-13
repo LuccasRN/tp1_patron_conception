@@ -16,13 +16,14 @@ public class Book extends Item {
 		this.author = author;
 	}	
 
-	public void print() {
-		System.out.println(this);
-	}
-
-	@Override
+	@Override	
 	public String toString() {
 		return "Livre : " + super.toString() + " de " + author;
+	}
+	@Override
+	public void accept(DeviceVisitor visitor) {
+		
+		visitor.visit(this);
 	}
 	
 }
